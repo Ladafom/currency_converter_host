@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
 import './App.css'
   
-const Microfrontend = lazy(() => import('currencyConverter/App'));
+const CurrencyConverter = lazy(() => import('currencyConverter/App'));
+const Currencies = lazy(() => import('currencies/App'));
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
         <h1>Конвертер валют</h1>
       </div>
       <Suspense fallback={<div>Loading Microfrontend...</div>}>
-        <Microfrontend />
+        <CurrencyConverter />
+        <Currencies/>
       </Suspense>
       <p>*Обновление каждый день в 16:00 по CET (UTC+1) </p>
     </div>
