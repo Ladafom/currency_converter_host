@@ -1,0 +1,43 @@
+.host {
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .logo > img {
+    width: 64px;
+  }
+  .logo > h1 {
+    font-size: 55px;
+  }
+  .logo{
+    gap: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .logo > img {
+    width: 52px;
+  }
+  .logo > h1 {
+    margin: 0 0 20px 0;
+    font-size: 45px;
+  }
+  .logo{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo > img {
+    width: 42px;
+  }
+  .logo > h1 {
+    font-size: 32px;
+  }
+}
